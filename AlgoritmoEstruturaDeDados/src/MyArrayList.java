@@ -76,4 +76,14 @@ public class MyArrayList implements MyList{
 		return this.array[pos];
 	}
 
+	@Override
+	public boolean isEmpty() {
+		if(this.size == 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+
 }

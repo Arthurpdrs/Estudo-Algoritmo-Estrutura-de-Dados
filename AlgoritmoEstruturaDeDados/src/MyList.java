@@ -10,5 +10,7 @@ public interface MyList {
 	public int getSize();
 	
 	public int get(int pos);
+	
+	public boolean isEmpty();
 
 }
