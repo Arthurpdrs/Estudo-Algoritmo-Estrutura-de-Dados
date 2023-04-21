@@ -34,9 +34,7 @@ public class MyArrayList implements MyList{
 			duplicar();
 		}
 		
-		for(int i = 0; i <= this.size; i++) {
-			this.array[this.size] = valor;
-		}
+		this.array[this.size] = valor;
 		this.size++;
 		
 	}
