@@ -19,9 +19,32 @@ public class Main {
 		lista.remove(7);
 		
 		
-		for (int i = 0; i < lista.getSize(); i++) {
-			System.out.println(lista.get(i));
+//		for (int i = 0; i < lista.getSize(); i++) {
+//			System.out.println(lista.get(i));
+//		}
+		
+		MyLinkedStack stack = new MyLinkedStack();
+		
+		stack.push(50);
+		stack.push(100);
+		stack.push(600);
+		
+		stack.pop();
+		
+		MyLinkedQueue queue = new MyLinkedQueue();
+		
+		queue.offer(500);
+		queue.offer(800);
+		queue.offer(1200);
+		queue.offer(973);
+		
+		
+		for (int i = queue.getSize(); i > 0; i--) {
+			System.out.println(queue.poll());
 		}
+		
+		
+
 	}
 
 }
