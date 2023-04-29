@@ -4,46 +4,22 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		DoubleLinkedList lista = new DoubleLinkedList();
+		BinarySearchTree bst = new BinarySearchTree();
 		
-		lista.add(5);
-		lista.add(12);
-		lista.add(9);
-		lista.add(20);
-		lista.add(30);
-		lista.add(50);
-		lista.add(60);
+		bst.add(10);
+		bst.add(7);
+		bst.add(3);
+		bst.add(12);
+		bst.add(11);
 		
-		lista.add(273, 6);
+		//bst.preOrderTraversal();
 		
-		lista.remove(7);
+		bst.inOrderTraversal();
 		
-		
-//		for (int i = 0; i < lista.getSize(); i++) {
-//			System.out.println(lista.get(i));
-//		}
-		
-		MyLinkedStack stack = new MyLinkedStack();
-		
-		stack.push(50);
-		stack.push(100);
-		stack.push(600);
-		
-		stack.pop();
-		
-		MyLinkedQueue queue = new MyLinkedQueue();
-		
-		queue.offer(500);
-		queue.offer(800);
-		queue.offer(1200);
-		queue.offer(973);
-		
-		
-		for (int i = queue.getSize(); i > 0; i--) {
-			System.out.println(queue.poll());
-		}
-		
-		
+		System.out.println(bst.contains(10));
+		System.out.println(bst.contains(12));
+		System.out.println(bst.contains(7));
+		System.out.println(bst.contains(500));
 
 	}
 
