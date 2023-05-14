@@ -56,8 +56,44 @@ public class BinarySearchTree implements MyTree{
 
 	@Override
 	public void remove(int value) {
-		// TODO Auto-generated method stub
+		this.root = remove(value, this.root);
 		
+	}
+	
+	private Node remove(int value, Node node) {
+		
+		if(node != null) {
+			
+			if(node.value == value) {
+				
+				if(node.left == null && node.right == null) {
+					return null;
+					
+				} else if(node.left == null || node.right == null) {
+					return node.left == null ? node.right : node.left;
+				
+				} else {
+					
+					Node inOrderPredecessor = node.left;
+					while(inOrderPredecessor.right != null) {
+						inOrderPredecessor = inOrderPredecessor.right;
+					}
+					node.value = inOrderPredecessor.value;
+					node.left = remove(inOrderPredecessor.value, node.left);
+					return node;
+				}
+			
+			}else if(value < node.value) {
+				node.left = remove(value, node.left);
+				return node;
+			
+			}else {
+				node.right = remove(value, node.right);
+				return node;
+			}
+		}
+		
+		return null;
 	}
 	
 	public void preOrderTraversal() {
